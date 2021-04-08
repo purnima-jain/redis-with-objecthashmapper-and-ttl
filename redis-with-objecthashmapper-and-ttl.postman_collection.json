@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "95306bae-da09-4811-942a-926632a9f945",
+		"name": "redis-with-objecthashmapper-and-ttl",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get-Customer-By-Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/redis-with-objecthashmapper-and-ttl/customers/{customerId}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"redis-with-objecthashmapper-and-ttl",
+						"customers",
+						"{customerId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save-Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Eddard\",\r\n    \"lastName\" : \"Stark\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/redis-with-objecthashmapper-and-ttl/customers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"redis-with-objecthashmapper-and-ttl",
+						"customers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-All-Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/redis-with-objecthashmapper-and-ttl/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"redis-with-objecthashmapper-and-ttl",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update-Customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": 1,\r\n    \"firstName\": \"Arya\",\r\n    \"lastName\": \"Stark\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/redis-with-objecthashmapper-and-ttl/customers/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"redis-with-objecthashmapper-and-ttl",
+						"customers",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete-Customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/redis-with-objecthashmapper-and-ttl/customers/{customerId}/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"redis-with-objecthashmapper-and-ttl",
+						"customers",
+						"{customerId}",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
